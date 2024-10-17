@@ -220,9 +220,11 @@ body {
 }
 
 /* Search */
-.search-home {
-    background-color: #222;
-    border: none;
+
+.search-home input {
+    background-color: black;
+    border: 1px solid #2f3336;
+    color: white;
     padding: 15px;
     width: 80%;
     border-radius: 50px;
@@ -230,27 +232,59 @@ body {
     margin-bottom: 15px;
     margin-left: 8%;
 }
+.search-home input::placeholder{
+    padding-left: 30px;
+}
+.search-home i{
+    top: 35px;
+    left: 69%;
+    float: right;
+    position: absolute;
+    z-index: 1;
+    opacity: 30%;
+}
 
-.search-exp {
-    background-color: #222;
-    border: none;
-    padding: 20px;
-    width: 93%;
+.search-exp input {
+    background-color: black;
+    border: 1px solid #2F3336;
+    padding: 15px;
+    width: 80%;
     border-radius: 50px;
+    margin-top: 20px;
     margin-bottom: 15px;
-    margin-top: 0;
+    margin-left: 8%;
+}
+.search-exp input::placeholder{
+    padding-left: 30px;
+}
+.search-exp i{
+    float: right;
+    position: relative;
+    top: 35px;
+    right: 86%;
+    opacity: 30%;
 }
 
-.search-bar-notif {
-    background-color: #222;
-    border: none;
-    padding: 3px;
-    width: 95%;
-    margin-top: 15px;
+.search-notifi input {
+    background-color: black;
+    border: 1px solid #2F3336;
+    padding: 15px;
+    width: 80%;
     border-radius: 50px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 8%;
 }
-
+.search-notifi input::placeholder{
+    padding-left: 30px;
+}
+.search-notifi i{
+    position: relative;
+    float: right;
+    bottom: 47px;
+    right: 82%;
+    opacity: 30%;
+}
 /* Trends and Premium Box */
 .trends {
     background-color: black;
@@ -632,6 +666,11 @@ i{
     margin-bottom: 4px;
 }
 
+.notification-text-blue {
+    position: relative;
+    top: 10px;
+}
+
 .notification-post {
     color: #71767B;
 }
@@ -793,28 +832,34 @@ i{
 }
 
 .search-bar-msg input {
-    width: 85%;
+    width: 75%;
     margin-left: 35px;
     padding: 15px;
     border-radius: 50px;
     border: none;
     background-color: black ;
-    border-bottom: 1px solid #2f3336;
+    border: 1px solid #2f3336;
     color: #fff;
 }
+.search-bar-msg input::placeholder{
+    padding-left: 30px;
+}
 .search-bar-msg i{
-    top: 25px;
-    float: right;
-    position: absolute;
-    left: 80%;
-    z-index: 1;
-    opacity: 50%;
+position: relative;
+float: right;
+top: 16px;
+right: 85%;
+opacity: 30%;
 }
 .message-item {
     padding: 20px;
     border-bottom: 1px solid #2f3336;
     display: flex;
     align-items: center;
+}
+.message-item p{
+    position: relative;
+    top: 5px;
 }
 
 .message-requests {
