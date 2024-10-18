@@ -1,163 +1,161 @@
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #15202B;
-            color: #ffffff;
-            height: 100%;
-            overflow: hidden;
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #15202B;
+    color: #ffffff;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    text-align: center;
+    z-index: 2;
+    background-color: rgba(21, 32, 43, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(29, 161, 242, 0.3);
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 0.5s backwards;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    background-color: #1DA1F2;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+    animation: fadeInUp 1s ease-out 1s backwards;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #1991db;
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 5px 15px rgba(29, 161, 242, 0.4);
+}
+
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.pulse {
+            animation: pulse 2s infinite;
         }
 
-        .hero-section {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
+.x-logo {
+    position: absolute;
+    font-size: 20rem;
+    color: #1DA1F2;
+    opacity: 0.1;
+    animation: rotate 20s linear infinite;
+}
 
-        .content {
-            text-align: center;
-            z-index: 2;
-            background-color: rgba(21, 32, 43, 0.7);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(29, 161, 242, 0.3);
-        }
-
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s ease-out 0.5s backwards;
-        }
-
-        .cta-button {
-            padding: 12px 24px;
-            font-size: 1.2rem;
-            background-color: #1DA1F2;
-            color: white;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s;
-            animation: fadeInUp 1s ease-out 1s backwards;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-button:hover {
-            background-color: #1991db;
-            transform: scale(1.05) translateY(-3px);
-            box-shadow: 0 5px 15px rgba(29, 161, 242, 0.4);
-        }
-
-        .background-animation {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .x-logo {
-            position: absolute;
-            font-size: 20rem;
-            color: #1DA1F2;
-            opacity: 0.1;
-            animation: rotate 20s linear infinite;
-        }
-
-        .tweet {
-            position: absolute;
-            font-size: 2rem;
-            opacity: 0;
-            animation: flyAcross 5s linear infinite;
-        }
-
-        .hashtag {
-            position: absolute;
-            font-size: 1.5rem;
-            color: #1DA1F2;
-            opacity: 20%;
-            animation: float 10s ease-in-out infinite;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
+.hashtag {
+    position: absolute;
+    font-size: 1.5rem;
+    color: #1DA1F2;
+    opacity: 20%;
+    animation: float 10s ease-in-out infinite;
+}
+.tweet {
+        font-size: 24px;
+        position: absolute;
+        left: -50px;
+        animation: flyAcross 5s linear forwards;
+        opacity: 0;
+}
 
         @keyframes flyAcross {
             0% {
-                left: -5%;
-                top: random(100%);
+                left: -50px;
                 opacity: 0;
-                transform: scale(0.5);
             }
             10% {
                 opacity: 1;
-                transform: scale(1);
             }
             90% {
                 opacity: 1;
-                transform: scale(1);
             }
             100% {
-                left: 105%;
-                top: random(100%);
+                left: calc(100% + 50px);
                 opacity: 0;
-                transform: scale(0.5);
             }
         }
 
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0) rotate(-5deg);
-                opacity: 0.7;
-            }
-            50% {
-                transform: translateY(-20px) rotate(5deg);
-                opacity: 1;
-            }
-        }
 
-        .pulse {
-            animation: pulse 2s infinite;
-        }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+        opacity: 1;
+    }
+}
+
 
         @keyframes pulse {
             0% {
                 transform: scale(1);
+                opacity: 1;
             }
             50% {
-                transform: scale(1.05);
+                transform: scale(1.1);
+                opacity: 0.7;
             }
             100% {
                 transform: scale(1);
+                opacity: 1;
             }
         }
